@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<settings version="1">
+	<section id="plugin.video.pbskids">
+		<category id="general" label="30100" help="">
+			<group id="1" label="30103">
+				<setting id="" type="" label="" help="">
+					<control type="" format=""/>
+				</setting>
+                <setting id="clear_cache" type="action" label="30180" help="">
+                    <level>0</level>
+                    <data>RunPlugin(plugin://plugin.video.pbskids?clear=1)</data>
+                    <control type="button" format="action">
+                        <close>true</close>
+                    </control>
+                </setting>
+            </group>
+        </category>
+    </section>
+</settings>
