@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<settings version="1">
+  	<section id="service.http.proxy">
+        <category id="http server" label="HTTP Server" help="">
+            <group id="1">
+                <setting id="http.listen" type="string" label="Listen on IP" help="">
+                    <level>0</level>
+                    <default>127.0.0.1</default>
+                    <control format="ip" type="edit">
+                        <heading>Listen on IP</heading>
+                    </control>
+                </setting>
+                <setting id="http.port" type="integer" label="Port" help="">
+                    <level>0</level>
+                    <default>8989</default>
+                    <constraints>
+                        <minimum>0</minimum>
+                        <maximum>65535</maximum>
+                    </constraints>
+                    <control format="integer" type="edit">
+                        <heading>Port</heading>
+                    </control>
+                </setting>
+                <setting id="http.ip.whitelist" type="string" label="IP whitelist (comma delimited)" help="">
+                    <level>0</level>
+                    <default/>
+                    <constraints>
+                        <allowempty>true</allowempty>
+                    </constraints>
+                    <control format="string" type="edit">
+                        <heading>IP whitelist (comma delimited)</heading>
+                    </control>
+                </setting>
+            </group>
+        </category>
+        <category id="advanced" label="Advanced" help="">
+            <group id="1">
+                <setting id="requests.ssl.verify" type="boolean" label="Force SSL certificate verification" help="">
+                    <level>0</level>
+                    <default>true</default>
+                    <control type="toggle"/>
+                </setting>
+                <setting id="requests.timeout.connect" type="integer" label="Requests connect timeout" help="">
+                    <level>0</level>
+                    <default>9</default>
+                    <constraints>
+                        <minimum>3</minimum>
+                        <step>3</step>
+                        <maximum>120</maximum>
+                    </constraints>
+                    <control format="integer" type="slider">
+                        <popup>false</popup>
+                        <formatlabel>14045</formatlabel>
+                    </control>
+                </setting>
+                <setting id="requests.timeout.read" type="integer" label="Requests read timeout" help="">
+                    <level>0</level>
+                    <default>27</default>
+                    <constraints>
+                        <minimum>10</minimum>
+                        <step>1</step>
+                        <maximum>120</maximum>
+                    </constraints>
+                    <control format="integer" type="slider">
+                        <popup>false</popup>
+                        <formatlabel>14045</formatlabel>
+                    </control>
+                </setting>
+            </group>
+            <group id="2">
+                <setting id="cache.size" type="integer" label="Cache size (MB)" help="">
+                    <level>0</level>
+                    <default>10</default>
+                    <constraints>
+                        <minimum>5</minimum>
+                        <step>1</step>
+                        <maximum>100</maximum>
+                    </constraints>
+                    <control format="integer" type="slider">
+                        <popup>false</popup>
+                    </control>
+                </setting>
+            </group>
+        </category>
+    </section>
+</settings>
